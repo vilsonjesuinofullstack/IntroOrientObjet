@@ -2,6 +2,7 @@ package classes;
 
 public class Aluno {
 
+    /*Atributos da classe aluno*/
    public String nome;
    public int idade;
     String dataNascimento;
@@ -13,6 +14,7 @@ public class Aluno {
     String nomeEscola;
     String serieMatriculado;
 
+    /*Construtores*/
     public Aluno(){
 
     }
