@@ -27,8 +27,7 @@ public class AppMain {
         aluno1.setNota3(Double.parseDouble(nota3));
         aluno1.setNota4(Double.parseDouble(nota4));
 
-        System.out.println("Nome do Aluno: " + aluno1.getNome());
-        System.out.println("Idade do Aluno: " + aluno1.getIdade());
+        System.out.println(aluno1);
         System.out.println("Calculo Média Nota: " + aluno1.getMediaNota());
         System.out.println("Resultado da Aprovação: " + aluno1.getAprovado());
     }
