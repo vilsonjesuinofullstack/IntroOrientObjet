@@ -11,8 +11,13 @@ public class AppMain {
         Aluno aluno1 = new Aluno();
         aluno1.setNome("Junior");
         aluno1.setIdade(30);
+        aluno1.setNota1(70);
+        aluno1.setNota2(75);
+        aluno1.setNota3(95);
+        aluno1.setNota4(60);
 
         System.out.println("Nome do Aluno: " + aluno1.getNome());
         System.out.println("Idade do Aluno: " + aluno1.getIdade());
+        System.out.println("Calculo Média Nota: " + aluno1.getMediaNota());
     }
 }
