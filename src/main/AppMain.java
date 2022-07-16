@@ -14,49 +14,27 @@ public class AppMain {
 
         String nome = JOptionPane.showInputDialog("Qual o nome do aluno: ");
         String idade = JOptionPane.showInputDialog("Qual a idade do aluno: ");
-        /*String disciplina1 = JOptionPane.showInputDialog("Qual a disciplina 1 do aluno: ");
-        String nota1 = JOptionPane.showInputDialog("Qual a nota 1 do aluno: ");
-        String disciplina2 = JOptionPane.showInputDialog("Qual a disciplina 2 do aluno: ");
-        String nota2 = JOptionPane.showInputDialog("Qual a nota 2 do aluno: ");
-        String disciplina3 = JOptionPane.showInputDialog("Qual a disciplina 3 do aluno: ");
-        String nota3 = JOptionPane.showInputDialog("Qual a nota 3 do aluno: ");
-        String disciplina4 = JOptionPane.showInputDialog("Qual a disciplina 4 do aluno: ");
-        String nota4 = JOptionPane.showInputDialog("Qual a nota 4 do aluno: ");*/
 
         /*new aluno é uma instancia, ou criação de um objeto*/
         /*aluno1 é uma referencia para o objeto aluno*/
-        Aluno aluno1 = new Aluno();
-        aluno1.setNome(nome);
-        aluno1.setIdade(Integer.parseInt(idade));
+        Aluno aluno = new Aluno();
+        aluno.setNome(nome);
+        aluno.setIdade(Integer.parseInt(idade));
 
+        for( int pos=0; pos<4; pos++){
 
-        Disciplina disciplina1 = new Disciplina();
-        disciplina1.setDisciplina("Logica");
-        disciplina1.setNota(85);
+            String nomeDisciplina = JOptionPane.showInputDialog("Qual a disciplina: " + pos);
+            String valorNota = JOptionPane.showInputDialog("Qual a nota: " + pos);
 
-        aluno1.getDisciplinas().add(disciplina1);
+            Disciplina disciplina = new Disciplina();
+            disciplina.setDisciplina(nomeDisciplina);
+            disciplina.setNota(Double.parseDouble(valorNota));
 
-        Disciplina disciplina2 = new Disciplina();
-        disciplina2.setDisciplina("Java");
-        disciplina2.setNota(95);
+            aluno.getDisciplinas().add(disciplina);
+        }
 
-        aluno1.getDisciplinas().add(disciplina2);
-
-        Disciplina disciplina3 = new Disciplina();
-        disciplina3.setDisciplina("CSS");
-        disciplina3.setNota(95);
-
-        aluno1.getDisciplinas().add(disciplina3);
-
-        Disciplina disciplina4 = new Disciplina();
-        disciplina4.setDisciplina("HTML");
-        disciplina4.setNota(95);
-
-        aluno1.getDisciplinas().add(disciplina4);
-
-
-        System.out.println(aluno1);
-        System.out.println("Calculo Média Nota: " + aluno1.getMediaNota());
-        System.out.println("Resultado da Aprovação: " + aluno1.getAprovado());
+        System.out.println(aluno);
+        System.out.println("Calculo Média Nota: " + aluno.getMediaNota());
+        System.out.println("Resultado da Aprovação: " + aluno.getAprovado());
     }
 }
