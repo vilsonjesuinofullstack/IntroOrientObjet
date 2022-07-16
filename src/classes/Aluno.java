@@ -147,4 +147,20 @@ public class Aluno {
     public double getMediaNota(){
         return (nota1 + nota2 + nota3 + nota4) / 4;
     }
+
+    public String getAprovado(){
+        if(this.getMediaNota() > 50){
+            if(this.getMediaNota() > 60){
+                if(this.getMediaNota() > 90){
+                    return "Parabéns, Aprovado com nota maxíma!";
+                }else{
+                    return "Aprovado";
+                }
+            }else{
+                return "Recuperação";
+            }
+        }else {
+            return "Reprovado";
+        }
+    }
 }
