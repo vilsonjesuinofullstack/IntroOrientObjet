@@ -12,9 +12,13 @@ public class AppMain {
 
         String nome = JOptionPane.showInputDialog("Qual o nome do aluno: ");
         String idade = JOptionPane.showInputDialog("Qual a idade do aluno: ");
+        String disciplina1 = JOptionPane.showInputDialog("Qual a disciplina 1 do aluno: ");
         String nota1 = JOptionPane.showInputDialog("Qual a nota 1 do aluno: ");
+        String disciplina2 = JOptionPane.showInputDialog("Qual a disciplina 2 do aluno: ");
         String nota2 = JOptionPane.showInputDialog("Qual a nota 2 do aluno: ");
+        String disciplina3 = JOptionPane.showInputDialog("Qual a disciplina 3 do aluno: ");
         String nota3 = JOptionPane.showInputDialog("Qual a nota 3 do aluno: ");
+        String disciplina4 = JOptionPane.showInputDialog("Qual a disciplina 4 do aluno: ");
         String nota4 = JOptionPane.showInputDialog("Qual a nota 4 do aluno: ");
 
         /*new aluno é uma instancia, ou criação de um objeto*/
@@ -26,6 +30,11 @@ public class AppMain {
         aluno1.setNota2(Double.parseDouble(nota2));
         aluno1.setNota3(Double.parseDouble(nota3));
         aluno1.setNota4(Double.parseDouble(nota4));
+
+        aluno1.setDisciplina1(disciplina1);
+        aluno1.setDisciplina2(disciplina2);
+        aluno1.setDisciplina3(disciplina3);
+        aluno1.setDisciplina4(disciplina4);
 
         System.out.println(aluno1);
         System.out.println("Calculo Média Nota: " + aluno1.getMediaNota());
