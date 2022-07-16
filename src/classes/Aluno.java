@@ -2,8 +2,8 @@ package classes;
 
 public class Aluno {
 
-    String nome;
-    int idade;
+   public String nome;
+   public int idade;
     String dataNascimento;
     String registroGeral;
     String numeroCpf;
@@ -12,4 +12,12 @@ public class Aluno {
     String dataMatricula;
     String nomeEscola;
     String serieMatriculado;
+
+    public Aluno(){
+
+    }
+    public Aluno(String nomePadrao, int idadePadrao){
+        nome = nomePadrao;
+        idade = idadePadrao;
+    }
 }
