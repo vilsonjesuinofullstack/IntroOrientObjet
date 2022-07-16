@@ -9,6 +9,8 @@ public class AppMain {
         /*new aluno é uma instancia, ou criação de um objeto*/
         /*aluno1 é uma referencia para o objeto aluno*/
         Aluno aluno1 = new Aluno("Pedro", 28);
+        aluno1.nome = "Vilson Jesuino";
+        aluno1.idade = 29;
 
         System.out.println("Nome do Aluno: " + aluno1.nome);
         System.out.println("Idade do Aluno: " + aluno1.idade);
