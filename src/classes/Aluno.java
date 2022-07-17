@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Aluno {
 
-    /*Atributos da classe aluno*/
     private String nome;
     private int idade;
     private String dataNascimento;
@@ -21,7 +20,6 @@ public class Aluno {
     List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 
-    /*Construtores*/
     public Aluno() {
 
     }
@@ -31,7 +29,6 @@ public class Aluno {
         idade = idadePadrao;
     }
 
-    /*Getters e Setters*/
 
     public String getNome() {
         return nome;
@@ -121,7 +118,6 @@ public class Aluno {
         this.disciplinas = disciplinas;
     }
 
-    /*Métodos de Calculo Media*/
 
     public double getMediaNota(){
 
@@ -133,8 +129,8 @@ public class Aluno {
     }
 
     public String getAprovado(){
-        if(this.getMediaNota() > 50){
-            if(this.getMediaNota() > 60){
+        if(this.getMediaNota() >= 50){
+            if(this.getMediaNota() >= 60){
                 if(this.getMediaNota() > 90){
                     return StatusAluno.APROVADO_NOTA_MAXIMA;
                 }else{

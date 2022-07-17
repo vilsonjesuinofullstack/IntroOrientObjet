@@ -13,18 +13,19 @@ public class AppMain {
 
     public static void main(String[] args) {
 
-        String login = JOptionPane.showInputDialog("Informe o login: ");
-        String senha = JOptionPane.showInputDialog("Informe o senha: ");
+        String login = JOptionPane.showInputDialog("Informe login: ");
+        String senha = JOptionPane.showInputDialog("Informe senha: ");
 
         if (login.equals("admin") && senha.equals("admin")) {
+
             List<Aluno> alunos = new ArrayList<Aluno>();
 
             HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
             for (int qtd = 1; qtd <= 1; qtd++) {
 
-                String nome = JOptionPane.showInputDialog("Qual o nome do aluno: " + qtd);
-                String idade = JOptionPane.showInputDialog("Qual a idade do aluno: " + qtd);
+                String nome = JOptionPane.showInputDialog("Nome do aluno: " + qtd);
+                String idade = JOptionPane.showInputDialog("Idade do aluno: " + qtd);
 
                 Aluno aluno = new Aluno();
                 aluno.setNome(nome);
@@ -32,8 +33,8 @@ public class AppMain {
 
                 for (int pos = 1; pos <= 4; pos++) {
 
-                    String nomeDisciplina = JOptionPane.showInputDialog("Qual a disciplina: " + pos);
-                    String valorNota = JOptionPane.showInputDialog("Qual a nota: " + pos);
+                    String nomeDisciplina = JOptionPane.showInputDialog("Disciplina do aluno: " + pos);
+                    String valorNota = JOptionPane.showInputDialog("Nota do aluno: " + pos);
 
                     Disciplina disciplina = new Disciplina();
                     disciplina.setDisciplina(nomeDisciplina);
@@ -42,7 +43,7 @@ public class AppMain {
                     aluno.getDisciplinas().add(disciplina);
                 }
 
-                int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
+                int escolha = JOptionPane.showConfirmDialog(null, "Quer remover alguma disciplina ?");
 
                 if (escolha == 0) {
 
@@ -50,7 +51,7 @@ public class AppMain {
                     int continuarRemover = 0;
                     while (continuarRemover == 0) {
 
-                        String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
+                        String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina 1, 2, 3 ou 4?");
                         aluno.getDisciplinas().remove(Integer.parseInt(disciplinaRemover) - posicao);
                         posicao += 1;
 
@@ -58,7 +59,6 @@ public class AppMain {
                         escolha = continuarRemover;
                     }
                 }
-
                 alunos.add(aluno);
             }
 
