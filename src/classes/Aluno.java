@@ -1,5 +1,7 @@
 package classes;
 
+import constantes.StatusAluno;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -134,15 +136,15 @@ public class Aluno {
         if(this.getMediaNota() > 50){
             if(this.getMediaNota() > 60){
                 if(this.getMediaNota() > 90){
-                    return "Parabéns, Aprovado com nota maxíma!";
+                    return StatusAluno.APROVADO_NOTA_MAXIMA;
                 }else{
-                    return "Aprovado";
+                    return StatusAluno.APROVADO;
                 }
             }else{
-                return "Recuperação";
+                return StatusAluno.RECUPERACAO;
             }
         }else {
-            return "Reprovado";
+            return StatusAluno.REPROVADO;
         }
     }
 
