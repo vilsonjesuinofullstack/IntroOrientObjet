@@ -4,44 +4,61 @@ import classes.Aluno;
 import classes.Disciplina;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AppMain {
 
     public static void main(String[] args) {
 
-        /*Entrada de Dados com JOptionPane*/
+        List<Aluno> alunos = new ArrayList<Aluno>();
 
-        String nome = JOptionPane.showInputDialog("Qual o nome do aluno: ");
-        String idade = JOptionPane.showInputDialog("Qual a idade do aluno: ");
+        for (int qtd = 1; qtd <= 1; qtd++) {
 
-        /*new aluno é uma instancia, ou criação de um objeto*/
-        /*aluno1 é uma referencia para o objeto aluno*/
-        Aluno aluno = new Aluno();
-        aluno.setNome(nome);
-        aluno.setIdade(Integer.parseInt(idade));
+            String nome = JOptionPane.showInputDialog("Qual o nome do aluno: " + qtd);
+            String idade = JOptionPane.showInputDialog("Qual a idade do aluno: " + qtd);
 
-        for( int pos=0; pos<4; pos++){
+            Aluno aluno = new Aluno();
+            aluno.setNome(nome);
+            aluno.setIdade(Integer.parseInt(idade));
 
-            String nomeDisciplina = JOptionPane.showInputDialog("Qual a disciplina: " + pos);
-            String valorNota = JOptionPane.showInputDialog("Qual a nota: " + pos);
+            for (int pos = 1; pos <= 4; pos++) {
 
-            Disciplina disciplina = new Disciplina();
-            disciplina.setDisciplina(nomeDisciplina);
-            disciplina.setNota(Double.parseDouble(valorNota));
+                String nomeDisciplina = JOptionPane.showInputDialog("Qual a disciplina: " + pos);
+                String valorNota = JOptionPane.showInputDialog("Qual a nota: " + pos);
 
-            aluno.getDisciplinas().add(disciplina);
+                Disciplina disciplina = new Disciplina();
+                disciplina.setDisciplina(nomeDisciplina);
+                disciplina.setNota(Double.parseDouble(valorNota));
+
+                aluno.getDisciplinas().add(disciplina);
+            }
+
+            int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
+
+            if (escolha == 0) {
+
+                int posicao = 1;
+                int continuarRemover = 0;
+                while (continuarRemover == 0) {
+
+                    String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
+                    aluno.getDisciplinas().remove(Integer.parseInt(disciplinaRemover) - posicao);
+                    posicao += 1;
+
+                    continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
+                    escolha = continuarRemover;
+                }
+            }
+
+            alunos.add(aluno);
         }
 
-        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
-
-        if(escolha == 0){
-            String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
-            aluno.getDisciplinas().remove(Integer.parseInt(disciplinaRemover) - 1);
+        for (Aluno aluno : alunos) {
+            System.out.println(aluno);
+            System.out.println("Calculo Média Nota: " + aluno.getMediaNota());
+            System.out.println("Resultado da Aprovação: " + aluno.getAprovado());
+            System.out.println("------------------------------------------------------------------");
         }
-
-        System.out.println(aluno);
-        System.out.println("Calculo Média Nota: " + aluno.getMediaNota());
-        System.out.println("Resultado da Aprovação: " + aluno.getAprovado());
     }
 }
