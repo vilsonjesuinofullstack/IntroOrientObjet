@@ -1,0 +1,33 @@
+# Introdução a Orientaão a Objetos
+
+- Introdução
+- Ideia central da orientação a objetos
+- O que o objeto em Java realmente faz
+- Paradigma procedural vs objetos
+- Caracteriticas dos Objetos
+- Primeira Classe e Objeto Aluno
+- Sobre Construtor
+- Instancia, Atributos e Referencias
+- Declarações de tipos publica e privada
+- Os métodos comuns Getters e Setters
+- Primeiro Método de claculo de media de nota
+- Métodos com retorno s foi aprovado ou não
+- Seolucionando problema de NullPointerException
+- Entrada de Dados com teclado
+- Conhecendo sobre toString
+- Conhecendo sobre Equals E HashCode
+- Criando atributos de diciplina do aluno
+- Criando objeto com as disciplina do aluno
+- Introdução a listas e coleçoes
+- Criando a lista de disciplina no objeto aluno
+- Adicionando disciplina e calculando a médias das notas
+- Criando a lista dinâmica das disciplinas do aluno
+- Removendo disciplinas da lista de aluno
+- Descobrindo se o aluno está em recuperaçao
+- Remover disciplinas em repetição
+- Criando e Percorrendo a lista de alunos
+- Procurando um aluno na lista e calculando a média
+- Procurando e removendo aluno
+- Criando lista de alunos aprovados, reprovados e em recuperação
+- Separando as listas com HashMap
+- Simples Validação de permissão de acesso
