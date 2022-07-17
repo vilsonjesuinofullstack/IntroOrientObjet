@@ -33,6 +33,13 @@ public class AppMain {
             aluno.getDisciplinas().add(disciplina);
         }
 
+        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina ?");
+
+        if(escolha == 0){
+            String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina 1, 2, 3 ou 4?");
+            aluno.getDisciplinas().remove(Integer.parseInt(disciplinaRemover) - 1);
+        }
+
         System.out.println(aluno);
         System.out.println("Calculo Média Nota: " + aluno.getMediaNota());
         System.out.println("Resultado da Aprovação: " + aluno.getAprovado());
